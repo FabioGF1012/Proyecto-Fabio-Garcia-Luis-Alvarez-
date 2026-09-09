@@ -1,0 +1,32 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+body { background: #f4f7f6; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+h1 { color: #2c3e50; margin-bottom: 20px; text-align: center; }
+
+/* CARTA Y ANIMACIÓN 3D */
+.card-container { width: 320px; height: 480px; perspective: 1000px; }
+.card { width: 100%; height: 100%; cursor: pointer; }
+.card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.card.flipped .card-inner { transform: rotateY(180deg); }
+
+/* FRENTE Y REVERSO */
+.card-front, .card-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 15px; padding: 15px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+/* CARA FRENTE */
+.card-front { background: #2193b0; color: white; justify-content: center; }
+.card-front h2 { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* CARA ATRÁS */
+.card-back { background: white; color: #333; transform: rotateY(180deg); border: 2px solid #2193b0; justify-content: flex-start; }
+.card-back img { width: 100%; height: 260px; object-fit: contain; background: #f4f7f6; border-radius: 8px; }
+.card-back p { width: 100%; margin-top: 18px; font-weight: bold; text-align: center; }
+
+/* BOTONES ABAJO */
+.nav-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
+.nav-buttons button { padding: 10px 20px; border-radius: 8px; border: none; background: #2193b0; color: white; font-size: 1rem; cursor: pointer; }
+.nav-buttons button:disabled { background: #ccc; cursor: not-allowed; }
+.video-list { width: min(100%, 420px); margin-top: 28px; }
+.video-list h2 { color: #2c3e50; margin-bottom: 10px; text-align: center; }
+.video-list ul { list-style: none; display: grid; gap: 8px; }
+.video-list li { background: white; border-radius: 8px; padding: 10px 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.video-list a { color: #16748d; font-weight: bold; text-decoration: none; }
+.video-list a:hover { text-decoration: underline; }

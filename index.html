@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Inglés y Programación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Aprende Inglés y Programación 🚀</h1>
+
+    <!-- CARTA ÚNICA DE TUS DIBUJOS -->
+    <div class="card-container">
+        <div class="card" id="mainCard">
+            <div class="card-inner">
+                
+                <!-- FRENTE DE LA CARTA (Muestra solo la palabra en inglés) -->
+                <div class="card-front">
+                    <h2 id="txtIngles">Cargando...</h2>
+                    <span class="click-hint">👇 info</span>
+                </div>
+
+                <!-- REVERSO DE LA CARTA (Meme + Traducción) -->
+                <div class="card-back">
+                    <img id="imgMeme" src="" alt="Meme">
+                    <p id="txtEspanol"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTONES DE NAVEGACIÓN ABAJO -->
+    <div class="nav-buttons">
+        <button id="btnAnterior" onclick="anteriorCarta()">Anterior</button>
+        <button id="btnSiguiente" onclick="siguienteCarta()">Siguiente</button>
+        <button id="btnVideos" onclick="toggleVideos()">Videos</button>
+    </div>
+
+    <section class="video-list" id="videoSection" hidden>
+        <h2>Videos</h2>
+        <ul id="videoList"></ul>
+    </section>
+
+    <!-- CONEXIÓN CON SUPABASE Y TU SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
