@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
 body { background: #f4f7f6; display: flex; flex-direction: column; align-items: center; padding: 20px; }
-h1 { color: #2c3e50; margin-bottom: 20px; text-align: center; }
+h1 { color: #000000; margin-bottom: 20px; text-align: center; }
 
 /* CARTA Y ANIMACIÓN 3D */
 .card-container { width: 320px; height: 480px; perspective: 1000px; }
